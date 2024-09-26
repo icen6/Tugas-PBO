@@ -19,6 +19,16 @@ public class Smartphone extends Handphone {
         System.out.println("Melakukan panggilan video ke nomor " + nomor);
     }
 
+    @Override
+    public void kirimPesan(String nomorTujuan, String pesan) {
+        System.out.println("Mengirimi pesan " + pesan + " dengan nomor tujuan " + nomorTujuan);
+    }
+
+    @Overload 
+    public void kirmPesan(String emailTujuan, String subjek, String pesan) {
+        System.out.println("Mengirimi pesan " + pesan + " dengan email tujuan " + emailTujuan + " dengan subjek " + subjek);
+    }
+
     public void aksesInternet() {
         System.out.println("Mengakses internet melalui Smartphone.");
     }
