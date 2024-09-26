@@ -1,4 +1,8 @@
 @startuml
+class Main {
+    + static void main(String[] args)
+}
+
 class Handphone {
     - String merk
     - String model
@@ -24,6 +28,9 @@ class FeaturePhone {
     + void mainGameSnake()
 }
 
+Main --> Handphone :uses
+Main --> Smartphone :uses 
+Main --> FeaturePhone :uses 
 Handphone <|-- Smartphone
 Handphone <|-- FeaturePhone
 @enduml
